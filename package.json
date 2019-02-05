@@ -1,0 +1,23 @@
+{
+  "name": "storybook-scratch",
+  "version": "1.0.0",
+  "description": "new storybook",
+  "main": "index.js",
+  "author": "Dan Stroot",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-info": "^4.1.11",
+    "@storybook/addon-knobs": "^4.1.11",
+    "@storybook/addon-options": "^4.1.11",
+    "@storybook/react": "^4.1.11",
+    "babel-loader": "^8.0.5",
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  }
+}
