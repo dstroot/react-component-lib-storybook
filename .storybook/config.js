@@ -2,9 +2,10 @@ import { addDecorator, configure } from "@storybook/react";
 import { withOptions } from "@storybook/addon-options";
 import { withInfo } from "@storybook/addon-info";
 
-// import "../src/styles.scss";
+// bootstrap styles
+import "../scss/main.scss";
 
-// get stories from components
+// Get stories from components.
 const req = require.context("../components", true, /\.stories\.js$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
@@ -14,6 +15,6 @@ function loadStories() {
 // NOTE: It is important to declare "withInfo" as the first decorator
 //       https://github.com/storybooks/storybook/tree/master/addons/info
 addDecorator(withInfo());
-addDecorator(withOptions({ name: "Geek's Log UI" }));
+addDecorator(withOptions({ name: "Our Library" }));
 
 configure(loadStories, module);
