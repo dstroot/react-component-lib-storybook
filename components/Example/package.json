@@ -1,0 +1,30 @@
+{
+  "name": "@anwb/progress",
+  "version": "0.3.1",
+  "description": "The ANWB Progress component",
+  "author": "Bart Waardenburg <bwaardenburg@anwb.nl>",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "directories": {
+    "lib": "src"
+  },
+  "scripts": {
+    "prepare": "yarn run build",
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "yarn run clean && rollup src/index.js --config ../../rollup.config.js -o dist/index.js"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "dependencies": {
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  }
+}
